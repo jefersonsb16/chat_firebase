@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navMainChatFragment">
+
+    <fragment
+        android:id="@+id/navMainChatFragment"
+        android:name="com.jefersonsalazar.testquicksas.view.ui.fragments.MainChatFragment"
+        android:label="fragment_main_chat"
+        tools:layout="@layout/fragment_main_chat" >
+        <action
+            android:id="@+id/action_mainChatFragment_to_listPersonalChatFragment"
+            app:destination="@id/navListPersonalChatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navListPersonalChatFragment"
+        android:name="com.jefersonsalazar.testquicksas.view.ui.fragments.ListPersonalChatFragment"
+        android:label="fragment_list_personal_chat"
+        tools:layout="@layout/fragment_list_personal_chat" >
+        <action
+            android:id="@+id/action_listPersonalChatFragment_to_settingsFragment"
+            app:destination="@id/navSettingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navSettingsFragment"
+        android:name="com.jefersonsalazar.testquicksas.view.ui.fragments.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+
+</navigation>

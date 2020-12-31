@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="heightLogoSplash">250dp</dimen>
+    <dimen name="size_image_login">100dp</dimen>
+    <dimen name="padding_normal">20dp</dimen>
+    <dimen name="radius_view">5dp</dimen>
+    <dimen name="padding_input">10dp</dimen>
+    <dimen name="margin_top">16dp</dimen>
+    <dimen name="size_label_register">16sp</dimen>
+    <dimen name="margin_top_label_register">24dp</dimen>
+    <dimen name="height_image_toolbar">50dp</dimen>
+    <dimen name="size_image_profile">150dp</dimen>
+    <dimen name="size_text_nameapp">40sp</dimen>
+    <dimen name="margin_8dp">8dp</dimen>
+    <dimen name="margin_normal">10dp</dimen>
+    <dimen name="height_input_chat">50dp</dimen>
+    <dimen name="height_input_register">60dp</dimen>
+    <dimen name="size_image_message_chat">36dp</dimen>
+    <dimen name="cardview_normal_elevation">5dp</dimen>
+    <dimen name="cardview_normal_radius">5dp</dimen>
+    <dimen name="size_image_user_chat">50dp</dimen>
+    <dimen name="size_subtitles">15sp</dimen>
+    <dimen name="text_size_normal">16sp</dimen>
+    <dimen name="size_toolbar_image_user_chat">40dp</dimen>
+</resources>

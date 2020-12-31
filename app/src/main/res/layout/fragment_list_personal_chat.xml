@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.ui.fragments.ListPersonalChatFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvChats"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/margin_normal" />
+
+    <ProgressBar
+        android:id="@+id/progressBarListChats"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+
+    <TextView
+        android:id="@+id/tvNotChats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/margin_top"
+        android:gravity="center_horizontal"
+        android:text="@string/text_not_chats"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="@dimen/size_subtitles"
+        android:visibility="gone" />
+
+</RelativeLayout>

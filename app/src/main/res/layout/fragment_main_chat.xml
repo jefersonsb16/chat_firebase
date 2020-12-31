@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.ui.fragments.MainChatFragment">
+
+    <ProgressBar
+        android:id="@+id/progressBarChatGroup"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textinputSearchUserChat"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_input_chat"
+        android:layout_margin="@dimen/margin_normal"
+        android:hint="@string/hint_search_user"
+        app:endIconDrawable="@drawable/ic_search"
+        app:endIconMode="custom">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtSearchUserChat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="0dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutUsers"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/textinputSearchUserChat"
+        android:visibility="gone">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvUsers"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:layout_marginRight="@dimen/margin_normal" />
+
+        <TextView
+            android:id="@+id/tvNotResults"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="@dimen/margin_top"
+            android:gravity="center_horizontal"
+            android:text="@string/text_not_results_search_user"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="@dimen/size_subtitles"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutGroupChat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/textinputSearchUserChat">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvGroupChat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/layoutSendMessage"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:layout_marginRight="@dimen/margin_normal"
+            android:layout_marginBottom="12dp" />
+
+        <RelativeLayout
+            android:id="@+id/layoutSendMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/margin_normal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textinputSendMessageGroup"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_input_chat"
+                android:layout_marginEnd="@dimen/margin_8dp"
+                android:layout_toStartOf="@+id/fabSend"
+                android:hint="@string/hint_write_message"
+                app:endIconDrawable="@drawable/ic_camera"
+                app:endIconMode="custom">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtSendMessageGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="0dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabSend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="4dp"
+                android:contentDescription="@string/fab_content_desc"
+                android:enabled="false"
+                app:fabSize="mini"
+                app:srcCompat="@drawable/ic_send"
+                app:tint="@color/white" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
